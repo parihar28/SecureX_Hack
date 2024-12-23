@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Safety Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      margin: 0;
+      width: 300px;
+    }
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none; /* Ensures it looks like a button */
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .section {
+      display: none;
+      text-align: center;
+    }
+
+    .url-item {
+      padding: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .safe {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .unsafe {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+
+    canvas {
+      margin: 20px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>URL Safety </h2>
+
+  <!-- Buttons -->
+  <button id="view-logs" class="button">View Recent Logs</button>
+  <button id="view-analytics" class="button">View Analytics</button>
+  <a href="try.html" target="_blank">Go to Dashboard</a> <!-- New Link Button -->
+
+  <!-- Logs Section -->
+  <div id="logs-section" class="section">
+    <h3>Recent Logs</h3>
+    <ul id="logs-list" style="list-style: none; padding: 0;"></ul>
+    <button id="back-from-logs" class="button">Back</button>
+  </div>
+
+  <!-- Analytics Section -->
+  <div id="analytics-section" class="section">
+    <h3>Analytics</h3>
+    <p>Total Safe URLs: <span id="safe-count">0</span></p>
+    <p>Total Unsafe URLs: <span id="unsafe-count">0</span></p>
+    <!-- <canvas id="analytics-pie-chart" width="250" height="250"></canvas> -->
+    <button id="back-from-analytics" class="button">Back</button>
+  </div>
+
+  <!-- Load Chart.js
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <script src="popup.js"></script>
+</body>
+</html>
