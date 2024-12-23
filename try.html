@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOCIAL MEDIA THREAT MONITOR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://t4.ftcdn.net/jpg/02/00/68/69/360_F_200686978_xUZgMeJv0Rj8a98jbfeHci8slCU8RdHF.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Login bar at the top-right */
+    .login-bar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .login-bar a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .login-bar a:hover {
+      background-color: #45a049;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    /* Main content area */
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    h1 {
+      color: #4CAF50;
+      text-transform: uppercase;
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .search-bar {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-bar button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #45a049;
+    }
+
+    #resultMessage {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    /* Dashboard Section */
+    .dashboard {
+      position: absolute;
+      top: 65%;
+      left: 1%;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 30px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      width: 300px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .dashboard h2 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      color: #eb811f;
+    }
+
+    .dashboard ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dashboard ul li {
+      padding: 5px 0;
+      border-bottom: 2px solid #000000;
+      font-size: 17px;
+    }
+
+    .dashboard ul li:last-child {
+      border-bottom: none;
+    }
+
+    .dashboard a {
+      color: #45a049;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dashboard a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Bar in the top-right corner -->
+  <div class="login-bar">
+    <a href="#" id="login">Login</a>
+    <a href="#" id="signup">Sign Up</a>
+  </div>
+
+<!-- Dashboard Section -->
+<div class="dashboard">
+  <h2>Dashboard</h2>
+  <ul>
+    <li><a href="piechart.html">Threat Analytics Using Pie Chart</a></li>
+    <!-- <li><a href="piechart.html?view=user-activity">User Activity</a></li> -->
+  </ul>
+</div>
+
+  <div class="main-content">
+    <h1>URL ADDRESS THREAT MONITOR</h1>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Enter URL to analyze...">
+      <button id="searchButton">Analyze URL</button>
+    </div>
+    <div id="resultMessage" style="font-size: 18px; margin-top: 20px;"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
