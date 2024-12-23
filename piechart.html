@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pie Chart Analytics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+    .chart-container {
+      width: 50%;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    canvas {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+    #debug-info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Analytics Pie Chart</h1>
+  <div class="chart-container">
+    <canvas id="analyticsChart"></canvas>
+  </div>
+  <div id="debug-info"></div> <!-- Debug Info Section -->
+  <script src="analytics.js"></script>
+</body>
+</html>
